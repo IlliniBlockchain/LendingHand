@@ -1,6 +1,10 @@
 pragma solidity ^0.8.17;
 
 contract LendingHand {
+
+
+    
+
 // profile info
     struct Profile {
         address user;
@@ -50,18 +54,40 @@ contract LendingHand {
         // change all attributes to ones passed by user
     }
 
+    
+    
     // deletes post, removes it from receivers array
     // add paramters
     //@akhil
-    function removePost() public {
-        /* can not resize arrays in solidity, make new array and move 
-        everything but deleted post over*/
+    function removePost(uint post_idx, address reciever_address) public view {
+        Post[] memory these_posts = getPost(reciever_address);
 
-        /* because indexing changes when deleting post form array, update post index (post_id)
-         of every post*/
+        for (uint i = post_idx; i < these_posts.length - 1; i++) {
+            these_posts[i] = these_posts[i + 1];
+        }
+        delete these_posts[these_posts.length - 1];
     }
 
+/*
+        Akhil's Notes:
+        'post_idx' is the index that refers to which post in the Post[] array you wanna get rid of. [Are we getting the post based on post_idx or post address?]
+        Presuming we can only access a certain Post[] array depending on what the reciever's address is, a getPost array was implemented where an array of Post struct 
+        is returned based on the recievers address as a parameter.
+        
+        There should be a function for getting a particular reciever's post??
+        Making one right below this function
+*/      
 
+// NEW @Akhil
+    function getPost(address this_address) public view returns (Post[] memory) {
+        return posts_list[this_address];
+    }
+// NEW @Akhil
+
+
+    
+    
+    
     //if you want to give money
     //  @manas
     function fundPost(address receiver, int post_id) public{
