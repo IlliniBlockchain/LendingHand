@@ -25,12 +25,36 @@ contract LendingHand {
     // mapping receivers to An array of their posts
     mapping(address => Post[]) public posts_list;
 
+
+    //checks if address is valid
+    modifier validAddress(address _addr) {
+        require(_addr != address(0), "Not valid address");
+        _;
+    }
+
+
     // users can make a profile
     // need to add arguments
     //@amit
-    function createProfile() public {
+    function createProfile(address _user, string calldata _username, string calldata _profile_pic, string calldata _bio) public validAddress(_user) {
         // initialize profile object, 
         // define attributes of profile
+        Profile memory profile = Profile(_user, _username, _profile_pic, _bio);
+        profile_map[_user] = profile;
+    }
+
+    //added a couple of extra methods for profile for extra functionality
+    
+    //given an existing address in the mapping, it'll update the users profile!
+    function updateProfile(address _user, string calldata _username, string calldata _profile_pic, string calldata _bio) public validAddress(_user)  {
+        delete profile_map[_user];
+        Profile memory profile = Profile(_user, _username, _profile_pic, _bio);
+        profile_map[_user] = profile;
+    }
+    
+    //deletes a Profile
+    function deleteProfile(address _user) public validAddress(_user) {
+        delete profile_map[_user];
     }
 
     //receivers can make a post
