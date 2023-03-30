@@ -45,9 +45,16 @@ contract LendingHand {
 
     // update posts attributes,  need to add more parameters
     //@vikram
-    function updatePost(address receiver, uint256 post_id) public {
+    function updatePost(address receiver, uint256 post_id,string title, string description, uint256 goal, uint256 amount_raised, string deadline) public {
         // call receiver's post array at idx 'post_id'
+        Post[] posts = posts_list[receiver];
+        Post post = posts[post_id];
         // change all attributes to ones passed by user
+        post.title = title;
+        post.description = description;
+        post.goal = goal;
+        post.amount_raised = amount_raised;
+        post.deadline = deadline;
     }
 
     // deletes post, removes it from receivers array
@@ -68,5 +75,6 @@ contract LendingHand {
         // fund receiver
         //update post with new amount
     }
+
     
 }
