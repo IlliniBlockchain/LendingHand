@@ -1,4 +1,5 @@
 pragma solidity ^0.8.17;
+import "hardhat/console.sol";
 
 contract LendingHand {
 // profile info
@@ -41,6 +42,7 @@ contract LendingHand {
         // create post_id, should just be index of the receiver's posts array idx.
         //push it to array of receiver's posts
         //Note: Currently assumes address is in post
+
         Post memory post;
         post.receiver = receiver;
         post.title = title;
