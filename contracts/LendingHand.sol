@@ -38,13 +38,25 @@ contract LendingHand {
 
     //receivers can make a post
     //@Yug
-    function createPost() public {
+    function createPost(address receiver, string calldata title, string calldata description, uint256 goal, uint256 amount_raised, string calldata deadline, uint256 num_donors) public {
         // initialize post object, 
         //define attributes of post, so fill in user provided receiver address, title, description, etc.
         // create post_id, should just be index of the receiver's posts array idx.
         //push it to array of receiver's posts
-        
+        //Note: Currently assumes address is in post
+
+        Post memory post;
+        post.receiver = receiver;
+        post.title = title;
+        post.description = description;
+        post.goal = goal;
+        post.amount_raised = amount_raised;
+        post.deadline = deadline;
+        post.num_donors = num_donors;
+        post.post_id = posts_list[receiver].length;
+        posts_list[receiver].push(post);
     }
+   
 
     // update posts attributes,  need to add more parameters
     //@vikram
