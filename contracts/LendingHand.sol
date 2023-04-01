@@ -3,8 +3,6 @@ pragma solidity ^0.8.17;
 contract LendingHand {
 
 
-    
-
 // profile info
     struct Profile {
         address user;
@@ -60,10 +58,11 @@ contract LendingHand {
     // add paramters
     //@akhil
     function removePost(uint post_idx, address reciever_address) public view {
-        Post[] memory these_posts = getPost(reciever_address);
+        Post[] memory these_posts = getPosts(reciever_address);
 
         for (uint i = post_idx; i < these_posts.length - 1; i++) {
             these_posts[i] = these_posts[i + 1];
+            these_posts[i].post_id--;
         }
         delete these_posts[these_posts.length - 1];
     }
@@ -79,7 +78,7 @@ contract LendingHand {
 */      
 
 // NEW @Akhil
-    function getPost(address this_address) public view returns (Post[] memory) {
+    function getPosts(address this_address) public view returns (Post[] memory) {
         return posts_list[this_address];
     }
 // NEW @Akhil
