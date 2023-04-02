@@ -93,9 +93,23 @@ contract LendingHand {
 
     //if you want to give money
     //  @manas
-    function fundPost(address receiver, int post_id) public{
+    function fundPost(address receiver, int post_id, int amount) public{
         // fund receiver
         //update post with new amount
+        int i; // define vars
+        Post post_to_donate_to;        
+        Post[] user_posts = posts_list[receiver]; // get posts of the receiver
+        
+        // loop through users posts and find the post that matches our post_id
+        for(i = 0; i < user_posts.length; i++){
+            if(user_posts[i].post_id == post_id){
+                post_to_donate_to = user_posts[i];
+            }
+        }
+
+        // send to receiver and update struct
+        receiver.send(amount);
+        post_to_donate_to.amount_raised += amount;
     }
     
 }
