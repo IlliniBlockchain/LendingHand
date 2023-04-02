@@ -1,9 +1,7 @@
 pragma solidity ^0.8.17;
-
+import "hardhat/console.sol";
 
 contract LendingHand {
-
-
 // profile info
     struct Profile {
         address user;
@@ -56,7 +54,6 @@ contract LendingHand {
         post.post_id = posts_list[receiver].length;
         posts_list[receiver].push(post);
     }
-   
 
     // update posts attributes,  need to add more parameters
     //@vikram
@@ -65,8 +62,6 @@ contract LendingHand {
         // change all attributes to ones passed by user
     }
 
-    
-    
     // deletes post, removes it from receivers array
     // add paramters
     //@akhil
@@ -94,12 +89,8 @@ contract LendingHand {
     function getPosts(address this_address) public view returns (Post[] memory) {
         return posts_list[this_address];
     }
-// NEW @Akhil
 
 
-    
-    
-    
     //if you want to give money
     //  @manas
     function fundPost(address receiver, int post_id) public{
