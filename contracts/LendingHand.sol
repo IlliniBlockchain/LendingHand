@@ -1,7 +1,10 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.17;
-import "hardhat/console.sol";
 
 contract LendingHand {
+
+
 // profile info
     struct Profile {
         address user;
@@ -9,6 +12,7 @@ contract LendingHand {
         string profile_pic;
         string bio;
     }
+
 //if you want money
     // define Post attributes
     struct Post {
@@ -21,6 +25,7 @@ contract LendingHand {
         string deadline;
         uint256 num_donors;
     }
+
     // mapping addresses to profiles
     mapping(address => Profile) profile_map;
     // mapping receivers to An array of their posts
@@ -62,6 +67,8 @@ contract LendingHand {
         // change all attributes to ones passed by user
     }
 
+    
+    
     // deletes post, removes it from receivers array
     // add paramters
     //@akhil
@@ -92,9 +99,14 @@ contract LendingHand {
 // NEW @Akhil
 
 
+    
+    
+    
     //if you want to give money
     //  @manas
     function fundPost(address receiver, int post_id) public{
         // fund receiver
         //update post with new amount
+    }
+    
 }
