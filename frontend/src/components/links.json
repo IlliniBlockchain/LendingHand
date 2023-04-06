@@ -1,0 +1,21 @@
+{
+    "links": [
+        {
+            "label": "Borrow",
+            "href": "/borrow"
+        },
+        {
+            "label": "Lend",
+            "href": "/lend"
+        },
+        {
+            "label": "Account",
+            "href": "/account"
+        },
+        {
+            "label": "Connect Wallet",
+            "href": "/connectwallet"
+        }
+
+    ]
+}
