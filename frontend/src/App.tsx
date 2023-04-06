@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Card from './routes/lend/components/Card'
 import './App.css'
 
 function App() {
@@ -8,6 +9,21 @@ function App() {
 
   return (
     <div className="App">
+      <Card
+        body='Akhil Post'
+        title='Need money'
+        image='https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Ffood-bank&psig=AOvVaw35jlIf29pQpSZ2xdk8ktVp&ust=1680841282264000&source=images&cd=vfe&ved=0CA8QjhxqFwoTCJCapu6zlP4CFQAAAAAdAAAAABAE'
+        badge={{
+          text: "New Post",
+          filled: false,
+        }}
+        indicator="Sold"
+        btn={{
+          text: "Read Post",
+          href: '#',
+          type: 'primary',
+          filled: true,
+        }} />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

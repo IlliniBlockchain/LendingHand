@@ -1,4 +1,5 @@
 import React from "react";
+import { Lend } from "./lend/lend";
 
 interface rootProps {}
 
