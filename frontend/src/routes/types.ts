@@ -12,11 +12,11 @@ export interface ButtonInterface {
 }
 
 export interface CardInterface {
-  indicator?: string,
-  badge?: BadgeInterface,
-  image?: string,
-  title: string,
-  subtitle?: string,
-  body: string,
-  btn: ButtonInterface
+  reason?: string;
+  badge?: BadgeInterface;
+  valuation?: string;
+  duration?: string;
+  btn?: ButtonInterface;
+  name?: string;
+  image?: string;
 }
