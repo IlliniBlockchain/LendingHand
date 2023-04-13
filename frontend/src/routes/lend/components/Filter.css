@@ -1,0 +1,50 @@
+.outer-box {
+    margin-left: 88vw;
+    height: 90vh;
+    width: 10vw;
+    padding-top: 5vh;
+    
+    border-style: solid;
+    border-color: black;
+}
+
+/* parent */
+.item-wrapper{
+    height: 10vh;
+    width: 10vw;
+    display: flex;
+}
+
+/* child 1 */
+.check-box-wrapper{
+    height:4.7vw;
+    width: 3vw;
+    display: flex;
+    flex: 0.5;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* child 2 */
+.check-box-text-wrapper{
+    height:4.7vw;
+    width: 6.3vw;
+    flex: 1.5;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 4.7vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    color: black;
+}
+
+.check-box{
+    border-style: solid;
+    border-color: black;
+    height:1vw;
+    width:1vw;
+}
+
