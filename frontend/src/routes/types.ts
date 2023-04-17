@@ -8,7 +8,7 @@ export interface ButtonInterface {
   type: string;
   href: string;
   filled?: boolean;
-  icon?: JSX.Element;
+  // icon?: JSX.Element;
 }
 
 export interface CardInterface {
@@ -19,4 +19,8 @@ export interface CardInterface {
   btn?: ButtonInterface;
   name?: string;
   image?: string;
+}
+
+export interface CardRowInterface {
+  card?: CardInterface;
 }
