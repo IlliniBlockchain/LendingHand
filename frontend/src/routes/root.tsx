@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css"
-import {Filter} from "../routes/lend/components/Filter"
+import Filter from "../components/Filter"
 
 interface rootProps {}
 
