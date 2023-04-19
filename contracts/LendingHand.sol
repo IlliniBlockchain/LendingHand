@@ -22,16 +22,71 @@ contract LendingHand {
         uint256 num_donors;
     }
     // mapping addresses to profiles
-    mapping(address => Profile) profile_map;
+    mapping(address => Profile) public profile_map;
+    //keeps track of all the keys in the map
+    address[] public profile_map_keys;
     // mapping receivers to An array of their posts
     mapping(address => Post[]) public posts_list;
+    
 
+
+    //checks if address is valid
+    modifier validAddress(address _addr) {
+        require(_addr != address(0), "Not valid address");
+        _;
+    }
+
+
+    /*
+    //In case we eventually need a getter
+    function getProfileMap() view public returns (address[] memory, Profile[] memory) {
+        address[] memory mAddresses = new address[](profile_map_keys.length);
+        Profile[] memory mProfiles = new Profile[](profile_map_keys.length);
+        for (uint i = 0; i < profile_map_keys.length; i++) {
+            mAddresses[i] = profile_map_keys[i];
+            mProfiles[i] = profile_map[profile_map_keys[i]];
+        }
+        return (mAddresses, mProfiles);
+    }
+    */
+
+    function getNumberUsers() view public returns (uint){
+        return profile_map_keys.length;
+    }
     // users can make a profile
     // need to add arguments
     //@amit
-    function createProfile() public {
+    function createProfile(address _user, string calldata _username, string calldata _profile_pic, string calldata _bio) public validAddress(_user) {
         // initialize profile object, 
         // define attributes of profile
+        Profile memory profile = Profile(_user, _username, _profile_pic, _bio);
+        profile_map[_user] = profile;
+        profile_map_keys.push(_user);
+    }
+
+    //added a couple of extra methods for profile for extra functionality
+    
+    //given an existing address in the mapping, it'll update the users profile!
+    function updateProfile(address _user, string calldata _username, string calldata _profile_pic, string calldata _bio) public validAddress(_user)  {
+        delete profile_map[_user];
+        Profile memory profile = Profile(_user, _username, _profile_pic, _bio);
+        profile_map[_user] = profile;
+    }
+    
+    //deletes a Profile
+    function deleteProfile(address _user) public validAddress(_user) {
+        delete profile_map[_user];
+
+        address[] memory new_keys = new address[](profile_map_keys.length - 1); //created a new array for resizing purposes
+        uint sub = 0;
+        for (uint i = 0; i < profile_map_keys.length; i++) {
+            if (profile_map_keys[i] != _user) {
+                new_keys[i - sub] = profile_map_keys[i];
+            } else {
+                sub = 1;
+            }
+        }
+        profile_map_keys = new_keys;
     }
 
     //receivers can make a post
