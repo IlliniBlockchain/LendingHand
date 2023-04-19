@@ -14,6 +14,10 @@
   margin-left: 20px;
 }
 
+.titles {
+  font-size: 16px;
+  font-family: inter;
+}
 .links-container {
   margin-right: 50px;
   display: flex;
