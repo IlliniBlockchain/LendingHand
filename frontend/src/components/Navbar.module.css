@@ -41,3 +41,13 @@
   color: white;
   background-color: darkorchid;
 }
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  /* min-width: 320px;
+  min-height: 100vh; */
+  /* font-size: 16px; */
+  font-family: Inter;
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Lend } from "./routes/lend/lend";
+import { Lend } from "./components/lend";
 import { Borrow } from "./routes/borrow";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Detail } from "./routes/detail";
 import { Profile } from "./routes/profile";
 import { Root } from "./routes/root";
+import App from './App'
 
 const router = createBrowserRouter([
   {
@@ -34,8 +35,9 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    {/* <App /> */}
   </React.StrictMode>
 );
