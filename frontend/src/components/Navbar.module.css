@@ -10,20 +10,14 @@
   position: absolute;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  /* min-width: 320px;
-  min-height: 100vh; */
-  /* font-size: 16px; */
-  font-family: Inter;
-}
-
 .logo-container {
   margin-left: 20px;
 }
 
+.titles {
+  font-size: 16px;
+  font-family: inter;
+}
 .links-container {
   margin-right: 50px;
   display: flex;
@@ -46,4 +40,14 @@ body {
   text-decoration: none;
   color: white;
   background-color: darkorchid;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  /* min-width: 320px;
+  min-height: 100vh; */
+  /* font-size: 16px; */
+  font-family: Inter;
 }
