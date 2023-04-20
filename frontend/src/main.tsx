@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Lend } from "./routes/lend/lend";
+import { Lend } from "./components/lend";
 import { Borrow } from "./routes/borrow";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
