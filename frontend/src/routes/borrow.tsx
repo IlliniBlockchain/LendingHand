@@ -9,7 +9,6 @@ interface borrowProps {}
 
 export const Borrow: React.FC<borrowProps> = ({}) => {
   return     <>
-  <NavBar />
-  <Grid></Grid>
+
   </>;
 };
