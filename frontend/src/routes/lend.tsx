@@ -4,11 +4,13 @@ import Filter from "../components/Filter"
 import NavBar from "../components/Navbar";
 import Grid from "../components/CardRow";
 import SingleCard from "../components/Card";
+interface lendProps {}
 
-interface borrowProps {}
-
-export const Borrow: React.FC<borrowProps> = ({}) => {
-  return     <>
-
-  </>;
+export const Lend: React.FC<lendProps> = ({}) => {
+  return (
+    <>
+    <NavBar />
+    <Grid></Grid>
+    </>
+  );
 };

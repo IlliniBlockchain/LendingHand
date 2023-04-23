@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import "./Filter.css"
+import styles from "./Navbar.module.css"
 //for card
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -31,7 +31,7 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 const card = (
   <React.Fragment>
     <CardContent sx={{ height: '100%'}}>
-      <Typography variant="h6" component="div">
+      <Typography className={styles['titles']} component="div">
         Filter
       </Typography>
 
@@ -49,7 +49,7 @@ const card = (
       
 
       <FormControl>
-      <Typography variant="h6" component="div">
+      <Typography className={styles['titles']} component="div">
         Sort
       </Typography>
      <RadioGroup
