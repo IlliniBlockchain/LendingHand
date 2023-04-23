@@ -1,64 +1,40 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import styles from './CardRow.module.css';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import RadioGroup from '@mui/material/RadioGroup';
-import Radio from '@mui/material/Radio';
-import Paper from '@mui/material/Paper';
-import SingleCard from "./Card"
-import { CardRowInterface } from '../../types';
+import SingleCard from "../components/Card";
+import Filter from './Filter';
 
-
-
-
-
-
-
-// AKHIL'S CODE
-
-// I NEED TO PASS IN AN *ARRAY* OF CARD COMPONENTS. HOW??!?!
-
-const SpacingGrid = ({card} : CardRowInterface) => {
-  const [spacing, setSpacing] = React.useState(10);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSpacing(Number((event.target as HTMLInputElement).value));
-  };
-
-  const jsx = `
-<Grid container spacing={${spacing}}>
-`;
-
+export default function BasicGrid() {
   return (
-    <Grid sx={{ flexGrow: 1 }} container spacing={10}>
-      <Grid item xs={12}>
-        <Grid container justifyContent="center" spacing={spacing}>
-          {[0, 1, 2, 3].map((value) => (
-            <SingleCard 
-              name = {card?.name}
-              duration = {card?.duration}
-              valuation = {card?.valuation}
-              reason = {card?.reason}
-            />
-
-
-
-
-            // <SingleCard
-            //     reason = 'I Need GIGANTIC PS5'
-            //     valuation= '10000'
-            //     duration= '10 months'
-            //     name= "Akhil Gogineni"
-            //     // btn={}
-            //     // image=''
-            //     // badge=
-            // />
-          ))}
+      <Box sx={{ flexGrow: 1 }} className={styles.card}>
+      <Grid container spacing={2.5} >
+        <Grid item xs={3}>
+           <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+        </Grid>
+        <Grid item xs={3}>
+          <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+        </Grid>
+        <Grid item xs={3}>
+          <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+        </Grid>
+        <Grid item xs={3}>
+        <Filter></Filter>
         </Grid>
       </Grid>
-    </Grid>
+      <Grid container spacing={2.5} >
+        <Grid item xs={3}>
+           <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+        </Grid>
+        <Grid item xs={3}>
+          <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+        </Grid>
+        <Grid item xs={3}>
+          <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+        </Grid>
+      </Grid>
+
+    </Box>
   );
 }
-
-export default SpacingGrid

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: white; /* #242424 */
+   /* #242424 */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,9 +27,10 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 820px;
   min-height: 100vh;
-  font-family: Inter;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
 }
 
 h1 {
