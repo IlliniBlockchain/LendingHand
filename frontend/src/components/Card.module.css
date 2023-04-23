@@ -1,17 +1,19 @@
 .card {
-  flex: 1 1 300px;
-  position: relative;
-  background-color: hsl(var(--bkg));
-  box-shadow: 2px 2px 40px hsl(var(--muted) / .5);
-  padding: var(--space-lg);
-  border-radius: var(--round-lg);
-  border-top: .1em solid white;
-  border-left: .1em solid white;
-  max-width: var(--content);
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 300px;
+  min-height: 100px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+.content {
+  padding: 0.525rem;
+}
+
 
 .body {
   max-width: var(--content);
+  padding: 1px;
 }
 
 .image {
