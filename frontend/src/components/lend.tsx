@@ -15,7 +15,6 @@ export const Lend: React.FC<lendProps> = ({}) => {
     <NavBar />
     <Box sx={{ flexGrow: 1 }} className={styles.card}>
       <CardRow></CardRow>
-      <CardRow2></CardRow2>
     </Box>
   
     </>
