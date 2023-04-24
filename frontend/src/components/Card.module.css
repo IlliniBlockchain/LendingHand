@@ -36,3 +36,16 @@
   padding: var(--space-sm);
   transform: translate(50%, -50%);
 }
+
+.MainCard {
+
+    display: flex;
+    place-items: center;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    justify-content: space-around;
+}
+
+.cardRow {
+  padding-top:'5vh';
+  margin-left:'14vw';
+}
