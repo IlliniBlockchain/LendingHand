@@ -2,15 +2,22 @@ import React from "react";
 import "../index.css"
 import Filter from "../components/Filter"
 import NavBar from "../components/Navbar";
-import Grid from "../components/CardRow";
+import CardRow from "../components/CardRow";
+import CardRow2 from "../components/CardRows";
 import SingleCard from "../components/Card";
+import styles from './CardRow.module.css';
+import Box from '@mui/material/Box';
 interface lendProps {}
 
 export const Lend: React.FC<lendProps> = ({}) => {
   return (
     <>
     <NavBar />
-    <Grid></Grid>
+    <Box sx={{ flexGrow: 1 }} className={styles.card}>
+      <CardRow></CardRow>
+      <CardRow2></CardRow2>
+    </Box>
+  
     </>
   );
 };
