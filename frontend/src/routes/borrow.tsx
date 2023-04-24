@@ -11,11 +11,11 @@ interface borrowProps {}
 
 export const Borrow: React.FC<borrowProps> = ({}) => {
   return <>
-    <Navbar></Navbar>
-    <Box>
-    <MainCard></MainCard>
-    <CardRow2></CardRow2>   
+    <Box display="flex" flexDirection="column">
+      <Navbar />
+      <MainCard />
+      <Typography variant="h5" style={{marginTop:"5vh", marginLeft:"15vw"}}> More like this </Typography>
+      <CardRow2 />
     </Box>
-
   </>;
 };

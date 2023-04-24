@@ -20,8 +20,8 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 export const MainCard = (props: any) => {
     return (
     
-    <Card className={styles.MainCard}  sx={{ marginTop: '-25vh', marginLeft: '15vw' , width: '70vw', height:'45vh'}} >
-      <Box sx={{ display: 'flex', height: '80vh', width: '50vw', flexDirection: 'column', justifyContent: 'center' }}>
+    <Card className={styles.MainCard}  sx={{ marginTop: '13vh', marginLeft: '15vw' , width: '70vw', height:'45vh'}} >
+      <Box sx={{ display: 'flex', height: '45vh', width: '50vw', flexDirection: 'column', justifyContent: 'center' }}>
         <CardMedia component="img" height="400" image={"https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"} alt="unsplash image" />
       </Box>
       <Box sx={{ display: 'flex', width: '80vw', flexDirection: 'column', justifyContent: 'center'}}>
@@ -38,7 +38,7 @@ export const MainCard = (props: any) => {
           </Typography>
           <BorderLinearProgress variant="determinate" value={20} />
         </CardContent>
-        <CardActions sx={{justifyContent: 'flex-end'}} style={{paddingRight:'1vw'}}>
+        <CardActions sx={{justifyContent: 'flex-end', paddingBottom:'2vh'}} style={{paddingRight:'1vw'}}>
           <Button variant="contained">Lend</Button>
         </CardActions>
       </Box>
