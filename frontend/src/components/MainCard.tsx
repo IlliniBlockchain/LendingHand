@@ -2,7 +2,7 @@ import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia} from
 import styles from './Card.module.css'
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import CardRow2 from "./CardRows";
+import CardRow2 from "./moreLikeThis";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,

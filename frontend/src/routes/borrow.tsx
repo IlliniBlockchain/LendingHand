@@ -4,8 +4,8 @@ import Filter from "../components/Filter"
 import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import { MainCard } from "../components/MainCard";
 import Navbar from "../components/Navbar";
-import CardRow2 from "../components/CardRows";
-import cardRow from "../components/CardRows"
+import CardRow2 from "../components/moreLikeThis";
+import cardRow from "../components/moreLikeThis"
 
 interface borrowProps {}
 
