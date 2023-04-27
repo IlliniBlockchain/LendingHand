@@ -4,6 +4,8 @@ import * as data from './links.json';
 const linksString = JSON.stringify(data);
 const links = JSON.parse(linksString).links;
 
+import ConnectButton from './ConnectWallet';
+
 type Link = {
     label: string;
     href: string;
@@ -21,6 +23,8 @@ const Links: React.FC<{ links: Link[] }> = ({ links }) => {
                     </div>
                 )
             })}
+
+            <ConnectButton/>
         </div>
     )
 };

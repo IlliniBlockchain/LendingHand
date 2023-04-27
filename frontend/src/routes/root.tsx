@@ -4,6 +4,7 @@ import  { Lend }  from "./lend";
 import { MainCard } from "../components/MainCard";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
+import ConnectButton from "../components/ConnectWallet";
 
  
 interface rootProps {}
