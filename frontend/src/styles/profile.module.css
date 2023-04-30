@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+  margin-top: 75px;
+  background-color: #685369;
+  color: whitesmoke;
+  display: grid;
+  font-size: 100%;
+  width: 115%;
+  height: 2000px;
+  grid-template-rows: 100px auto auto auto;
+}
+
+.box {
+  padding: .5rem;
+  background-color: whitesmoke;
+  color: black;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.profile {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: -57rem;
+  margin-top: 8rem;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 1rem;
+}
+
+.profile-pic {
+  width: 80%;
+  max-width: 250px;
+  max-height: 250px;
+  height: 60%;
+  border: 5px outset black;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+.image-div {
+  padding: .5rem;
+  display: grid;
+}
+
+.open-borrow {
+  display: grid;
+  grid-template-rows: 100px auto;
+}
+
+.open-borrow-box {
+  background-color: #EADDE1;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+}
+
+.title-box {
+  margin-top: 1rem;
+}
+
+.input-box {
+  margin-top: 1rem;
+  outline: 2px solid black;
+}
+
+.open-borrow-stat-box {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 10%;
+  height: 80%;
+  padding: 1rem;
+}
+
+
+.Progress_Status {
+  width: 50%;
+  background-color: #685369;
+}
+  
+.myprogressBar {
+  width: 1%;
+  height: 35px;
+  background-color: #EACB95;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
+
+.open-borrow-image {
+  margin: 1rem;
+  border: 5px outset black;
+  border-radius: 10%;
+}

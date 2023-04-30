@@ -12,9 +12,12 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.16",
+    "@usedapp/core": "^1.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "sweetalert2": "^11.7.3",
+    "web3": "^1.9.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

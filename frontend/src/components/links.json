@@ -10,12 +10,7 @@
         },
         {
             "label": "Account",
-            "href": "/account"
-        },
-        {
-            "label": "Connect Wallet",
-            "href": "/connectwallet"
+            "href": "/profile"
         }
-
     ]
 }

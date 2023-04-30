@@ -1,0 +1,10 @@
+.card {
+    margin: 7vw;
+    display: block;
+    place-items: center;
+    width: full;
+    height: 100vh;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    flex-direction: column;
+  }
+  
