@@ -9,6 +9,7 @@ import { Profile } from "./routes/profile";
 import { Root } from "./routes/root";
 import { DAppProvider } from "@usedapp/core";
 
+const file = null;
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: <Profile file = {file}/>,
       },
     ],
   },

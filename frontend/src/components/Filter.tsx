@@ -39,7 +39,7 @@ const card = (
       <FormGroup>
       <FormControlLabel control={<Checkbox />} label="Education" />
       <FormControlLabel control={<Checkbox />} label="Agriculture" />
-      <FormControlLabel control={<Checkbox />} label="Women + Minorities" />
+      <FormControlLabel control={<Checkbox />} label="Medicine" />
       </FormGroup>
       </Box>
       

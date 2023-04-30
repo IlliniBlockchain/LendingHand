@@ -7,8 +7,8 @@ const linksString = JSON.stringify(data);
 const loans = JSON.parse(linksString).loans;
 import { LoanType, LoanListType } from '../components/ActiveLoan';
 import ActiveLoan from '../components/ActiveLoan';
-import Swal from 'sweetalert2'
-
+//import Swal from 'sweetalert2'
+import { useRef } from 'react';
 
 //for card
 interface ImagePreviewProps {
@@ -78,8 +78,8 @@ export const Profile: React.FC<ImagePreviewProps> = ({}) => {
   const etherBalance = useEtherBalance(account);
   const balance = etherBalance?.toString() ? etherBalance?.toString() : "0"
   const percentage = ((tempBorrow.amount_raised/tempBorrow.goal) * 100).toString() + "%"
-  const hiddenFileInput = React.useRef(null);
-
+  // const hiddenFileInput = React.useRef(null);
+  const hiddenFileInput = useRef<HTMLInputElement>(null);
 
   let LoanList: LoanListType = {activeLoanList: []}
 
@@ -98,9 +98,13 @@ export const Profile: React.FC<ImagePreviewProps> = ({}) => {
     }
   };
 
-  const handleClick = event => {
-    hiddenFileInput.current.click();
-  };
+  function handleClick() {
+    // Do something
+    hiddenFileInput?.current?.click();
+  }
+  // const handleClick = event => {
+    
+  // };
 
   const handleProfileChanges = (): void => {
     window.prompt("Hello", "world")
@@ -114,7 +118,7 @@ export const Profile: React.FC<ImagePreviewProps> = ({}) => {
 
         <div className={styles['image-div']}>
           <h2 style={{paddingBottom: "30px"}}>Account Information</h2>
-          <img src={imageSrc} alt="Hi" width="100" height="100" className={styles['profile-pic']}></img>
+          <img src={imageSrc} alt="Hi" width="200" height="200" className={styles['profile-pic']}></img>
           <button onClick={handleClick} style={{backgroundColor: "#BCA3AC"}}>Update Picture</button>
           <input type="file" onChange={handleFileUpload} ref={hiddenFileInput} style={{display: 'none'}}></input>
         </div>
@@ -175,7 +179,7 @@ export const Profile: React.FC<ImagePreviewProps> = ({}) => {
 
       <Box className={styles['box']}>
         <h2>Active Loans</h2>
-        <ActiveLoan activeLoanList={LoanList.activeLoanList}/>
+        {/* <ActiveLoan activeLoanList={LoanList.activeLoanList}/> */}
       </Box>
     </body>
   );
