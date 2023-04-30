@@ -10,13 +10,13 @@ export default function BasicGrid() {
   return (
       <Grid container spacing={2.5} style={{paddingTop:'5vh', marginLeft:'14vw'}}>
         <Grid item xs={3}>
-           <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+           <SingleCard title = "Equipment for Restaurant in Pakistan" borrower="Jane Smith" description=" I am writing to request a loan to purchase new kitchen equipment for my restaurant. This investment will help us improve the quality of our food ..." image="https://i.ytimg.com/vi/Xdya8eym9nM/maxresdefault.jpg"/>
         </Grid>
         <Grid item xs={3}>
-          <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+          <SingleCard title = "Thread for Tailors in Nepal" borrower="Jane Smith" description="I am writing to request a loan to purchase a bulk amount of thread for my tailoring business in Nepal. The loan will enable me to buy the necessary material..." image="https://share.america.gov/wp-content/uploads/2021/12/Purnaa-mastercard-ace-awards-india-nepal-women-jobs-DSC02683.jpg"/>
         </Grid>
         <Grid item xs={3}>
-          <SingleCard title = "Goats for Farm in Turkey" borrower="Jane Smith" description="I currently run a goat farm and have been able to sustain it with the few goats that I have. However, I am unable to expand my business due to limited capital..." image="https://s.yimg.com/ny/api/res/1.2/1kMUtWi44OgtHlxe1HJ.1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en_us/News/Reuters/2018-07-12T131835Z_1_LYNXMPEE6B150_RTROPTP_2_TURKEY-NOMADS.JPG"/>
+          <SingleCard title = "Seeds for Farm in Kenya" borrower="Jane Smith" description="With this investment, I plan to purchase high-quality seeds and expand my crop production, which will help increase my income and contribute to the local ..." image="https://storage.googleapis.com/cgiarorg/2020/03/3eda507a-farmer-betty-bondo-in-her-field.jpg"/>
         </Grid>
       </Grid>
   );

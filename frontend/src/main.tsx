@@ -7,8 +7,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Detail } from "./routes/detail";
 import { Profile } from "./routes/profile";
 import { Root } from "./routes/root";
-import App from './App'
+import { DAppProvider } from "@usedapp/core";
 
+const file = null;
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: <Profile file = {file}/>,
       },
     ],
   },
@@ -37,7 +38,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <DAppProvider config={{}}>
+      <RouterProvider router={router} />
+    </DAppProvider>
     {/* <App /> */}
   </React.StrictMode>
 );

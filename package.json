@@ -10,12 +10,13 @@
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
     "@typechain/ethers-v5": "^10.2.0",
     "@typechain/hardhat": "^6.1.5",
+    "@types/react": "^18.0.32",
+    "@types/react-dom": "^18.0.11",
     "chai": "^4.3.7",
     "ethers": "^5.7.2",
     "hardhat": "^2.13.0",
-    "hardhat-gas-reporter": "^1.0.2",
-    "solidity-coverage": "^0.7.22",
-    "typechain": "^8.1.1",
-    "typescript": "^5.0.4"
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "typechain": "^8.1.1"
   }
 }
